@@ -6,12 +6,12 @@ The repository brings together the main components required for developing and d
 ## Ontology Engineering
 The ontology engineering component focuses on the design and development of SRTO, including the core concepts, relationships, and properties required to represent a routable road network. We reuse some of core ocncepts fro transport rad network representation from the following ontologies: Transportation System Ontology, KM4City, the Ontology for Transportation Networks (OTN), and GeoSPARQL. 
 
-![SRTO Ontology Diagram](ontology/OSMTransportRoadNetworkData.png)
+![SRTO Ontology Diagram](ontology/SRTO.png)
 
 ## Road Network Data
 The road network data component provides the source data used to populate and demonstrate the ontology. These data are transformed and semantically enriched using the concepts defined in SRTO to create a road network knowledge graph.
 
-![Road Network Data Diagram](data/.png)
+![Road Network Data Diagram](data/OSMTransportRoadNetworkData.png)
 
 ## Road Network Knowledge Graph (RNKG) 
 The knowledge graph provides a semantic representation of the road network in which relevant entities and their relationships are explicitly connected, supporting querying and routing-related applications.
