@@ -1,7 +1,9 @@
-# The Simple Routable Transport Ontology (SRTO)
+# SRTO: The Simple Routable Transport Ontology 
 
-# Data
 
-# Australian Road Network Knowledge Graph 
 
-# Tools and Software
+## Data
+
+## Australian Road Network Knowledge Graph 
+
+## Tools and Software
