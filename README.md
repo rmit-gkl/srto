@@ -8,7 +8,7 @@ The ontology engineering component focuses on the design and development of SRTO
 ## Road Network Data
 The road network data component provides the source data used to populate and demonstrate the ontology. These data are transformed and semantically enriched using the concepts defined in SRTO to create a road network knowledge graph.
 
-## Road Network Knowledge Graph 
+## Road Network Knowledge Graph (RNKG) 
 The knowledge graph provides a semantic representation of the road network in which relevant entities and their relationships are explicitly connected, supporting querying and routing-related applications.
 
 ## Tools and Technologies
