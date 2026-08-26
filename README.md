@@ -23,7 +23,7 @@ The knowledge graph provides a semantic representation of the road network in wh
 
 ## Tools and Technologies
 We use the following tools and technologies for ontology development, semantic enrichment, data integration, knowledge graph construction, and interaction with the resulting knowledge graph:  
-
+- Local Ontology Studio
 - Python 
 - GraphDB 
 - Apache Jena
