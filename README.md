@@ -29,5 +29,5 @@ Apache Jena
 
 ## Web Interface 
 
-## Acknowledgement
+## Acknowledgements
 This development of SRTO was led by Prawal Lohani and Nenad Radosevic, with contributions from all of the researchers at the [RMIT Geographic Knowledge Lab](http://gkl.rmit.melbourne/about): Alexis Horde Vo, Nayomi Ranamuka, Ozzy Yaguang Tao, and GKL Director [Prof Matt Duckham](https://academics.rmit.edu.au/matt-duckham). 
