@@ -4,7 +4,8 @@ This GitHub repository demonstrates the Simple Routable Transport Ontology (SRTO
 The repository brings together the main components required for developing and demonstrating the SRTO ontology and its associated road network knowledge graph. These components include ontology engineering, road network data, the road network knowledge graph, and the tools used to develop and construct the ontology and knowledge graph.
 
 ## Ontology Engineering
-The ontology engineering component focuses on the design and development of SRTO, including the core concepts, relationships, and properties required to represent a routable road network.
+The ontology engineering component focuses on the design and development of SRTO, including the core concepts, relationships, and properties required to represent a routable road network. We reuse some of core ocncepts fro transport rad network representation from the following ontologies: Transportation System Ontology, KM4City, the Ontology for Transportation Networks (OTN), and GeoSPARQL. 
+
 ## Road Network Data
 The road network data component provides the source data used to populate and demonstrate the ontology. These data are transformed and semantically enriched using the concepts defined in SRTO to create a road network knowledge graph.
 
