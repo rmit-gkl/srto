@@ -1,1 +1,1 @@
-# SRTO Omntology Engineering 
+# SRTO Ontology Engineering 
