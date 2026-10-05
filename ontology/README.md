@@ -14,4 +14,4 @@ The second step involves designing an ontology that models the real-world domain
 ## Adding restrictions
 The next step is to incorporate different types of restrictions for routing through the transport network. We introduce a new class, *Restriction*, and several object properties, including *hasTurnRestriction* and *hasAccessRestriction*. These new classes and properties enable the modelling of routing constraints and support route planning between different locations.
 
-![SRTO Ontology Diagram](ontology/SRTO.jpg)
+![SRTO Ontology Diagram](SRTO.jpg)
