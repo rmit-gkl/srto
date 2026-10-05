@@ -1,6 +1,6 @@
 # SRTO Ontology Engineering 
 The ontology engineering process usually involves multiple steps. The first step is to define a set of competency questions. The SRTO ontology aims to answer some of the following example questions: 
-- Can you provode to me the route between A and B? 
+- Can you provide the route between A and B? 
 - What are adjacent nodes to a particular node? 
 - Show me all the intersections where I can turn, right ? 
 - What is the speed limit on a particular road? 
