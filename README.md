@@ -15,7 +15,7 @@ The road network data component provides the source data used to populate and de
 - Victorian road network data 
 - Open Street Map road network data 
 
-![Road Network Data Diagram](data/OSMTransportRoadNetworkData.png)  
+![Road Network Data Diagram](rnkg/toy_example_area_2.pdf)  
 
 ![Table Data Diagram](data/OSMTableData.png)
 
