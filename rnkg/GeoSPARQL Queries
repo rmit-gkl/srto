@@ -1,7 +1,7 @@
 ## GeoSPARQL Queries
 
 Query 1: Can you list all nodes along the transport network between two specific nodes? For example, from Node 76347674 to Node 76347669?
-
+-----------------------------------------
 PREFIX gkl:        <http://rmit.org/gkl#>
 PREFIX geo:        <http://www.opengis.net/ont/geosparql#>
 PREFIX pathSearch: <https://qlever.cs.uni-freiburg.de/pathSearch/>
