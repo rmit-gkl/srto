@@ -1,0 +1,64 @@
+##GeoSPARQL Queries
+
+PREFIX gkl:        <http://rmit.org/gkl#>
+PREFIX geo:        <http://www.opengis.net/ont/geosparql#>
+PREFIX pathSearch: <https://qlever.cs.uni-freiburg.de/pathSearch/>
+SELECT ?seq ?node ?nodeType ?junction ?nodeWKT
+WHERE {
+  # Shortest path: the candidate path with the fewest arcs ...
+  {
+    SELECT ?path (COUNT(?step) AS ?hops) WHERE {
+      SERVICE pathSearch: {
+        _:p1 pathSearch:algorithm pathSearch:allPaths ;
+             pathSearch:source gkl:Node_76347674 ;   # <-- source node
+             pathSearch:target gkl:Node_76347669 ;    # <-- target node
+             pathSearch:maxDepth 10 ;                # <-- max arcs per path
+             pathSearch:pathColumn ?path ;
+             pathSearch:edgeColumn ?step ;
+             pathSearch:start ?fromNode ;
+             pathSearch:end ?toNode ;
+             pathSearch:edgeProperty ?arc .
+        {
+          SELECT * WHERE {
+            ?arc gkl:startNode ?fromNode ;
+                 gkl:endNode ?toNode .
+          }
+        }
+      }
+    }
+    GROUP BY ?path
+    ORDER BY ASC(?hops) ASC(?path)
+    LIMIT 1
+  }
+  # ... and its arcs (same block as above, so it comes from QLever's cache).
+  SERVICE pathSearch: {
+    _:p2 pathSearch:algorithm pathSearch:allPaths ;
+         pathSearch:source gkl:Node_76347674 ;   # <-- source node
+         pathSearch:target gkl:Node_76347669 ;    # <-- target node
+         pathSearch:maxDepth 10 ;                # <-- max arcs per path
+         pathSearch:pathColumn ?path ;
+         pathSearch:edgeColumn ?step ;
+         pathSearch:start ?fromNode ;
+         pathSearch:end ?toNode ;
+         pathSearch:edgeProperty ?arc .
+    {
+      SELECT * WHERE {
+        ?arc gkl:startNode ?fromNode ;
+             gkl:endNode ?toNode .
+      }
+    }
+  }
+  # Turn arcs into a node sequence: the start of arc 0, then the end of every arc.
+  VALUES ?side { 0 1 }
+  FILTER (?side = 1 || ?step = 0)
+  BIND (IF(?side = 0, ?fromNode, ?toNode) AS ?node)
+  BIND (?step + ?side AS ?seq)
+  OPTIONAL { ?node gkl:hasNodeType ?nodeType . }
+  # Geometry lives on the Junction that contains the node (intersections only).
+  OPTIONAL {
+    ?junction gkl:containsNode ?node ;
+              a gkl:Junction ;
+              geo:hasGeometry/geo:asWKT ?nodeWKT .
+  }
+}
+ORDER BY ?seq
